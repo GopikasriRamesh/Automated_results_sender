@@ -1,0 +1,9 @@
+# Secrets
+.env
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+
+# Data (Optional - if you don't want to share student emails)
+data/Student_Summary_Results.csv

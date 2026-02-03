@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: auto; padding: 20px; border: 1px solid beige}
+        .header { background-color: #4A90E2; color: white; padding: 10px; text-align: center; border-radius: 5px 5px 0 0; }
+        .logo { width: 60px; height: 60px; border-radius: 50%; border: 2px solid white; margin-bottom: 10px; }
+        .result-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .result-table th, .result-table td { border: 1px solid #ddd; text-align: left; }
+        .result-table th { background-color: #f2f2f2; }
+        .score-highlight { font-size: 18px; font-weight: bold; color: #4A90E2; }
+        .footer { font-size: 12px; color: #777; text-align: center; margin-top: 30px; border-top: 1px solid #eee; padding-top: 10px; }
+    </style>
+    <title>Evaluation</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://i.postimg.cc/T1Mb7TTJ/logo.png" alt="Club Logo" class="logo"><br>
+            Assessment Results
+        </div>
+        <p>Dear <strong>{{name}}</strong> (Reg No:{{reg_no}}),
+        </p>
+        <p>Thank you for participating in the technical evaluation.Here is your performance breakdown:</p>
+        <p>Overall Score:{{total_marks}}/80 ({{total_percent}}%)</p>
+
+        <table class="result-table">
+            <thead>
+                <tr>
+                    <th>Domain</th>
+                    <th>Marks Obtained</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>FrontEnd(HTML,CSS,JS,React)</td>
+                    <td>{{fe_marks}}/40</td>
+                    <td>{{fe_percent}}%</td>
+                </tr>
+                <tr>
+                    <td>BackEnd(Node,Express,Java)</td>
+                    <td>{{be_marks}}/20</td>
+                    <td>{{be_percent}}%</td>
+                </tr>
+                 <tr>
+                    <td>DataBase(SQL,NoSQL)</td>
+                    <td>{{db_marks}}/20</td>
+                    <td>{{db_percent}}%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Great effort! Use this feedback to focus on areas that may need more practice.</p>
+
+        <div class="footer">
+            <p><strong>This is Automated "No-Reply" message.</strong></p><br>
+            Please do not reply to this email as the inbox is not monitored
+            </p>
+        </div>
+    </div>
+</body>
+</html>
